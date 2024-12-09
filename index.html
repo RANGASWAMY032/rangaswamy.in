@@ -4,47 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Portfolio - Rangaswamy</title>
-    <style>
-        /* Inline CSS */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; background-color: #f9f9f9; color: #333; scroll-behavior: smooth; animation: fadeIn 1s ease-out; }
-        .container { width: 80%; margin: 0 auto; }
-        h1, h2, h3 { color: #333; }
-        a { text-decoration: none; color: #333; }
-        a:hover { color: #007BFF; }
-        .navbar { background-color: #007BFF; color: white; padding: 10px 0; position: fixed; width: 100%; top: 0; z-index: 1000; transition: background-color 0.3s ease; animation: fadeIn 1.5s ease-out; }
-        .navbar.scrolled { background-color: #0056b3; }
-        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
-        .navbar .logo { font-size: 24px; color: white; }
-        .nav-links { list-style-type: none; display: flex; gap: 20px; }
-        .nav-links li { display: inline; }
-        .nav-links li a { color: white; font-size: 18px; padding: 10px; text-transform: uppercase; }
-        .nav-links li a:hover { background-color: #0056b3; border-radius: 5px; }
-        header { margin-top: 70px; text-align: center; background-color: #f9f9f9; padding: 50px 0; animation: fadeIn 1.5s ease-out; }
-        header h1 { margin-bottom: 10px; font-size: 40px; color: #333; }
-        .section { padding: 40px 0; text-align: center; color: #333; animation: fadeIn 1s ease-out; }
-        #about { background-color: #ffffff; }
-        #skills { background-color: #f9f9f9; }
-        #contact { background-color: #ffffff; }
-        .about-content { display: flex; align-items: center; justify-content: center; gap: 20px; color: #333; animation: slideIn 1s ease-out; }
-        .profile-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 5px solid #f9f9f9; }
-        .about-text { text-align: left; }
-        .about-text h3 { font-size: 24px; margin-bottom: 10px; }
-        .about-text p { font-size: 16px; line-height: 1.6; }
-        #skills ul { list-style-type: none; padding: 0; }
-        #skills li { font-size: 18px; padding: 5px 0; color: #333; transition: background-color 0.3s ease, padding 0.3s ease; opacity: 0; transform: translateY(20px); animation: fadeInUp 1s ease-out forwards; }
-        #skills li:hover { background-color: #007BFF; border-radius: 5px; padding: 10px; }
-        footer { background-color: #333; color: #fff; text-align: center; padding: 10px 0; margin-top: 40px; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes slideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @media (max-width: 768px) { 
-            .about-content { flex-direction: column; text-align: center; }
-            .profile-img { width: 120px; height: 120px; }
-            .navbar .container { flex-direction: column; }
-            .nav-links { flex-direction: column; gap: 10px; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -54,6 +14,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -69,7 +30,7 @@
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
-                <img src="https://media.licdn.com/dms/image/v2/D4E35AQELtBVnWQGm_g/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1730593013411?e=1733810400&v=beta&t=FM6AsgD2wKTxcJkLEkrTfKWxXiZiLyr3x5S-NPXCtDQ" alt="Your Image" class="profile-img">
+                <img src="https://via.placeholder.com/150" alt="Your Image" class="profile-img">
                 <div class="about-text">
                     <h3>Rangaswamy</h3>
                     <p>Hi! I'm Rangaswamy, a passionate student currently pursuing a Diploma in Computer Engineering. I enjoy learning new technologies, solving technical problems, and applying my knowledge to real-world challenges. Welcome to my portfolio!</p>
@@ -92,6 +53,16 @@
         </div>
     </section>
 
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2>Certifications</h2>
+            <ul>
+                <li>10th Pass (2018-2023) - Board of Secondary Education, Andhra Pradesh (BSEAP)</li>
+                <li>Vocational Certificate in Domestic Data Operator (2021-2023) - Board of Secondary Education, Andhra Pradesh (BSEAP)</li>
+            </ul>
+        </div>
+    </section>
+
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact</h2>
@@ -110,13 +81,6 @@
         </div>
     </footer>
 
-    <script>
-        // Inline JavaScript
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
-
