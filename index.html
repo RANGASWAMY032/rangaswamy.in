@@ -32,10 +32,10 @@
 
         /* Header */
         header {
-            margin-top: 70px; /* Accounts for the fixed navbar */
+            margin-top: 70px;
             text-align: center;
             background-color: #f9f9f9;
-            padding: 50px 20px; /* Added padding for better mobile layout */
+            padding: 50px 20px;
         }
         header h1 { font-size: 40px; }
 
@@ -59,8 +59,9 @@
         .profile-img { 
             width: 150px; 
             height: 150px; 
-            border-radius: 50%; /* Ensures the image is circular */
+            border-radius: 50%;
             object-fit: cover; 
+            aspect-ratio: 1 / 1; /* Ensure image remains circular */
         }
 
         /* Skills, Certifications, Contact */
@@ -84,21 +85,21 @@
 
         /* Media Queries */
         @media (max-width: 768px) {
-            header h1 { font-size: 30px; } /* Adjust font size for smaller screens */
+            header h1 { font-size: 30px; }
             .about-content { 
-                flex-direction: column; /* Stack image and text vertically */
+                flex-direction: column;
                 text-align: center;
             }
             .profile-img { 
                 width: 120px; 
                 height: 120px; 
+                aspect-ratio: 1 / 1; /* Keep image perfectly circular on mobile */
             }
             .nav-links { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container">
             <h1 class="logo">My Portfolio</h1>
@@ -121,7 +122,7 @@
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
-                <img src="RANGASWAMY.jpg" alt="Your Image" class="profile-img">
+                <img src="RANGASWAMY.jpg" alt="Rangaswamy Profile Picture" class="profile-img">
                 <div class="about-text">
                     <h3>Rangaswamy</h3>
                     <p>Hi! I'm Rangaswamy, a passionate student currently pursuing a Diploma in Computer Engineering. I enjoy learning new technologies, solving technical problems, and applying my knowledge to real-world challenges. Welcome to my portfolio!</p>
@@ -144,59 +145,10 @@
         </div>
     </section>
 
-    <section id="certifications" class="section">
-        <div class="container">
-            <h2>Certifications</h2>
-            <ul>
-                <li>10th Pass (2018-2023) - Board of Secondary Education, Andhra Pradesh (BSEAP)</li>
-                <li>Vocational Certificate in Domestic Data Operator (2021-2023) - Board of Secondary Education, Andhra Pradesh (BSEAP)</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>You can reach me at:</p>
-            <ul>
-                <li>Email: 23022.cm.032@gmail.com</li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/rangaswamy-m-k-9199b732b/" target="_blank">RANGASWAMY M.K</a></li>
-                <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
-            </ul>
-        </div>
-    </section>
-
     <footer>
         <div class="container">
             <p>&copy; 2024 Rangaswamy. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        // Section Scroll Animation
-        const sections = document.querySelectorAll('.section');
-        const options = {
-            threshold: 0.2
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Stop observing once the animation is applied
-                }
-            });
-        }, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
 </body>
 </html>
