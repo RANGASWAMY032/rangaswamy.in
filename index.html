@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portfolio - Rangaswamy</title>
+    <title>Home</title>
     <style>
-        /* General Styles */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Arial', sans-serif; background-color: #f9f9f9; color: #333; scroll-behavior: smooth; }
         .container { width: 80%; margin: 0 auto; }
@@ -13,7 +12,6 @@
         a { text-decoration: none; color: #333; }
         a:hover { color: #007BFF; }
 
-        /* Navbar */
         .navbar {
             background-color: #007BFF;
             color: white;
@@ -22,81 +20,41 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            transition: background-color 0.3s ease;
         }
-        .navbar.scrolled { background-color: #0056b3; }
         .navbar .container { display: flex; justify-content: space-between; align-items: center; }
         .nav-links { list-style-type: none; display: flex; gap: 20px; }
         .nav-links li a { color: white; font-size: 18px; padding: 10px; text-transform: uppercase; }
-        .nav-links li a:hover { background-color: #0056b3; border-radius: 5px; }
 
-        /* Header */
         header {
             margin-top: 70px;
             text-align: center;
-            background-color: #f9f9f9;
             padding: 50px 20px;
         }
         header h1 { font-size: 40px; }
 
-        /* Sections */
         .section {
             padding: 100px 0;
             text-align: center;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
         }
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        #about, #contact { background-color: #ffffff; }
-        #skills, #certifications { background-color: #f9f9f9; }
+        #about, #skills, #certifications, #contact { opacity: 1; transform: translateY(0); }
 
-        /* About */
-        .about-content { display: flex; align-items: center; gap: 20px; }
-        .profile-img { 
-            width: 150px; 
-            height: 150px; 
-            border-radius: 50%;
-            object-fit: cover; 
-            aspect-ratio: 1 / 1; /* Ensure image remains circular */
-        }
+        .about-content { display: flex; align-items: center; gap: 20px; justify-content: center; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
 
-        /* Skills, Certifications, Contact */
         ul { list-style-type: none; padding: 0; }
         ul li {
             font-size: 18px;
             padding: 5px;
             margin: 10px 0;
-            color: #333;
-            border-radius: 5px;
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
         ul li:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             background-color: #007BFF;
             color: white;
         }
 
-        /* Footer */
         footer { background-color: #333; color: #fff; text-align: center; padding: 10px 0; }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            header h1 { font-size: 30px; }
-            .about-content { 
-                flex-direction: column;
-                text-align: center;
-            }
-            .profile-img { 
-                width: 120px; 
-                height: 120px; 
-                aspect-ratio: 1 / 1; /* Keep image perfectly circular on mobile */
-            }
-            .nav-links { flex-direction: column; gap: 10px; }
-        }
     </style>
 </head>
 <body>
@@ -123,9 +81,9 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <img src="RANGASWAMY.jpg" alt="Rangaswamy Profile Picture" class="profile-img">
-                <div class="about-text">
+                <div>
                     <h3>Rangaswamy</h3>
-                    <p>Hi! I'm Rangaswamy, a passionate student currently pursuing a Diploma in Computer Engineering. I enjoy learning new technologies, solving technical problems, and applying my knowledge to real-world challenges. Welcome to my portfolio!</p>
+                    <p>Hi! I'm Rangaswamy, a Diploma student in Computer Engineering. I enjoy learning new technologies and applying my skills to solve problems.</p>
                 </div>
             </div>
         </div>
@@ -140,8 +98,25 @@
                 <li>Web Development</li>
                 <li>Python</li>
                 <li>Java</li>
-                <li>Research & Development</li>
             </ul>
+        </div>
+    </section>
+
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Python Programming - Coursera</li>
+                <li>Web Development - Udemy</li>
+                <li>Graphic Design Masterclass</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:rangaswamy@example.com">rangaswamy@example.com</a></p>          
         </div>
     </section>
 
